@@ -7,6 +7,7 @@
     display: grid;
     grid-template-rows: 1000px 1fr;
     grid-template-columns: 2fr 10fr;
+    background-color:#e4dfd9;
     grid-template-areas: 
     'people message' 
     'messagePeople';

@@ -1,11 +1,9 @@
 import React from 'react'
-import s from './Content.module.css'
-import PConteiner from './post/PConteiner'
+import s from './ProfileInfo.module.css'
 
-export default function Content(props) {
-
+const ProfileInfo = () => {
 	return (
-		<div className={s.content}>
+		<div>
 			<div>
 				<img
 					className={s.img}
@@ -13,9 +11,9 @@ export default function Content(props) {
 					alt="abstraction"
 				/>
 			</div>
-			<PConteiner 
-			store={props.store} 
-			/>
+			<div className={s.descriptionBlock}></div>
 		</div>
 	)
 }
+
+export default ProfileInfo

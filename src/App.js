@@ -1,23 +1,23 @@
 import './App.css'
-import s from './component/content/Content.module.css'
-import Header from './component/header/Header'
-import Content from './component/content/Content'
-import NavBar from './component/navBar/NavBar'
-import { BrowserRouter, Route } from 'react-router-dom'
-import DialogsConteiner from './component/Dialogs/DialogsConteiner'
+import React from 'react';
+import Header from './components/Header/Header';
+import Navbar from './components/Navbar/Navbar';
+import Profile from './components/Profile/Profile';
+import {Route} from "react-router-dom";
+import DialogsContainer from "./components/Dialogs/DialogsContainer";
 
 function App(props) {
 	return (
-		<BrowserRouter>
-			<div className="App_wrapper">
-				<Header />
-				<NavBar />
-				<div className={s.content}>
-					<Route path="/Profile" render={() => <Content />} />
-					<Route path="/Message" render={() => <DialogsConteiner />} />
-				</div>
-			</div>
-		</BrowserRouter>
+		<div className='App_wrapper'>
+		<Header />
+		<Navbar />
+		<div>
+			<Route path='/message'
+				render={ () => <DialogsContainer /> }/>
+			<Route path='/profile'
+				render={ () => <Profile /> }/>
+		</div>
+	</div>
 	)
 }
 
